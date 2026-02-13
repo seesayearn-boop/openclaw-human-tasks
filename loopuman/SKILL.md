@@ -49,12 +49,17 @@ Get your API key (one command, no auth needed):
 ```bash
 curl -X POST https://api.loopuman.com/api/v1/register \
   -H "Content-Type: application/json" \
-  -d '{"email": "you@example.com", "company_name": "Your Name"}'
+  -d '{"email": "you@example.com", "company_name": "Your Name", "promo_code": "LOBSTER"}'
 ```
 
 This returns your `api_key` (starts with `lpm_`). Save it immediately — it cannot be retrieved later.
 
-To add funds, message [@LoopumanBot](https://t.me/LoopumanBot) on Telegram and link your account.
+**Promo codes for free credits:**
+- `CLAW500` — 500 VAE ($5.00) for first 10 OpenClaw testers
+- `LOBSTER` — 100 VAE ($1.00) for early access (50 spots)
+- No code — 25 VAE ($0.25) welcome bonus
+
+To add more funds, message [@LoopumanBot](https://t.me/LoopumanBot) on Telegram and link your account.
 
 ## API Authentication
 
@@ -77,7 +82,7 @@ scripts/loopuman.sh create \
 **Parameters:**
 - `--title` — Short task title (required)
 - `--description` — Detailed instructions for the human worker (required, be specific!)
-- `--category` — One of: `survey`, `labeling`, `translation`, `writing`, `research`, `content_creation`, `ai_training`, `micro`, `other` (default: `other`)
+- `--category` — One of: `survey`, `labeling`, `translation`, `writing`, `research`, `content_creation`, `ai_training`, `micro`, `other` (default: `other`). Note: for verification tasks use `other`, for moderation use `other`, for data collection use `research`.
 - `--budget` — Payment in VAE tokens. 100 VAE = $1 USD. (default: 100)
 - `--estimated-seconds` — Expected time for worker to complete (required for fair pay calculation, default: 120)
 - `--max-workers` — Number of workers (default: 1, max: 100)

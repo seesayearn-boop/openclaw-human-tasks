@@ -29,9 +29,12 @@ install the loopuman skill from https://github.com/loopuman/openclaw-human-tasks
 ```bash
 curl -X POST https://api.loopuman.com/api/v1/register \
   -H "Content-Type: application/json" \
-  -d '{"email": "you@example.com", "company_name": "Your Name"}'
+  -d '{"email": "you@example.com", "company_name": "Your Name", "promo_code": "CLAW500"}'
 ```
 2. Save the `api_key` from the response (starts with `lpm_`)
+
+**Promo codes:** `CLAW500` = 500 VAE ($5) for first 10 testers · `LOBSTER` = 100 VAE ($1) for 50 early access spots · No code = 25 VAE free
+
 3. Configure:
 
 ```bash
