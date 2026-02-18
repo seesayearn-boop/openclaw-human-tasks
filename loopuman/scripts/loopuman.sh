@@ -24,8 +24,7 @@ API_KEY=$(jq -r '.apiKey' "$CONFIG_FILE")
 API_URL=$(jq -r '.apiUrl // "https://api.loopuman.com"' "$CONFIG_FILE")
 
 if [[ "$API_KEY" == "null" || "$API_KEY" == "YOUR_API_KEY" ]]; then
-  echo "Error: Invalid API key. Get one with:"
-  echo "curl -X POST https://api.loopuman.com/api/v1/register -H 'Content-Type: application/json' -d '{\"email\":\"you@example.com\",\"company_name\":\"Your Name\"}'"
+  echo "Error: Invalid API key. Get one from @LoopumanBot on Telegram (/apikey)"
   exit 1
 fi
 
